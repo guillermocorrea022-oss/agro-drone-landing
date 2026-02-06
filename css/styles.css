@@ -937,4 +937,92 @@ h1,h2,h3,h4,h5{
 .workflow-icon svg{
   display: block;
 }
+/* =========================================
+   MOBILE HERO & STATS TUNING
+   Solo <=600px
+========================================= */
 
+@media (max-width: 600px){
+
+ 
+  /* 4️⃣ FIELD STATS → horizontal */
+  .field-stats{
+    grid-template-columns: repeat(3, 1fr); /* horizontal */
+    text-align: center;
+    gap: .6rem;
+  }
+
+  .field-stats div{
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: .8rem .4rem;
+  }
+
+  .field-stats span{
+    font-size: .65rem;
+    display: block;
+  }
+
+  .field-stats strong{
+    font-size: .95rem;
+    margin-top: .15rem;
+  }
+}
+
+
+/* =========================================
+   FIX MOBILE HERO – NO HORIZONTAL SCROLL
+========================================= */
+
+/* 1️⃣ Prevención global (safe) */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2️⃣ HERO: contención real en mobile */
+@media (max-width: 600px){
+
+  .hero-tech{
+    overflow-x: hidden;
+  }
+
+  .hero-media{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 3️⃣ DRON: nunca más fuera del viewport */
+  .hero-drone{
+    position: relative;
+    padding-top: 50px;
+
+    right: 0 !important;
+
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 1.2rem auto;
+
+    display: block;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* 4️⃣ DASHBOARD: sin scale en mobile */
+  .hero-dashboard{
+    transform: none !important;
+    margin-top: -10rem;
+    padding-bottom: 40px;
+  }
+
+  .nowrap-desktop {
+    padding-top: 90px;
+   
+  }
+
+ 
+
+
+  
+}
